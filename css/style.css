@@ -1438,22 +1438,17 @@ button {
 .site-footer {
   background-color: var(--neutral-900);
   color: var(--neutral-400);
-  padding: 64px 0 32px 0;
+  padding: 48px 0 28px 0;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .footer-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  gap: 48px;
-  padding-bottom: 48px;
+  padding-bottom: 28px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .footer-brand-col {
-  max-width: 360px;
+  max-width: 520px;
 }
 
 .footer-logo {
@@ -1477,36 +1472,11 @@ button {
   font-weight: 600;
 }
 
-.footer-col h4 {
-  font-family: var(--font-heading);
-  font-size: 1rem;
-  font-weight: 600;
-  color: var(--neutral-white);
-  margin-bottom: 20px;
-}
-
-.footer-links {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.footer-links a {
-  font-size: 0.9rem;
-  color: var(--neutral-400);
-  transition: color var(--transition-fast);
-}
-
-.footer-links a:hover {
-  color: var(--primary-teal-light);
-}
-
 .footer-bottom {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 32px;
+  padding-top: 24px;
   font-size: 0.85rem;
   color: var(--neutral-500);
 }

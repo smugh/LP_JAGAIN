@@ -64,8 +64,8 @@ Buka browser pada alamat `http://localhost:3000` atau `http://localhost:8000`.
 Buka berkas [`js/main.js`](js/main.js) untuk mengubah tautan unduhan dan informasi kontak:
 
 ```javascript
-// Ganti dengan tautan folder / APK Google Drive Anda:
-const GOOGLE_DRIVE_URL = 'https://drive.google.com';
+// Tautan folder APK Google Drive JAGAIN:
+const GOOGLE_DRIVE_URL = 'https://drive.google.com/drive/folders/1mBO7EFfQIpnAVun0_sgjWmS8NEbQCOGo?usp=sharing';
 
 // Informasi kontak:
 const CONTACT_EMAIL = 'smughbowf@gmail.com';

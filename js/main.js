@@ -11,8 +11,8 @@
 // =============================================================================
 // 1. CONFIGURATION
 // =============================================================================
-// Ganti URL di bawah ini dengan tautan Google Drive / Folder APK Anda yang sesungguhnya
-const GOOGLE_DRIVE_URL = 'https://drive.google.com';
+// Tautan Google Drive Folder APK JAGAIN
+const GOOGLE_DRIVE_URL = 'https://drive.google.com/drive/folders/1mBO7EFfQIpnAVun0_sgjWmS8NEbQCOGo?usp=sharing';
 
 // Nomor Kontak & Dukungan
 const CONTACT_EMAIL = 'smughbowf@gmail.com';

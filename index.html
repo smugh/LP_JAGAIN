@@ -191,6 +191,134 @@
   </section>
 
   <!-- ========================================================================
+       2b. App Screenshots Showcase (Section 2)
+       ======================================================================== -->
+  <section class="screenshots-section" id="tampilan">
+    <div class="container">
+      <div class="screenshots-header-wrap">
+        <div class="section-header">
+          <div class="section-badge">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M17 1.01L7 1c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-1.99-2-1.99zM17 19H7V5h10v14z"/>
+            </svg>
+            <span data-i18n="ss.badge">Antarmuka Aplikasi</span>
+          </div>
+          <h2 class="section-title" data-i18n="ss.title">Tampilan Langsung Aplikasi JAGAIN</h2>
+          <p class="section-subtitle" data-i18n="ss.subtitle">
+            Desain intuitif, bersih, dan fokus pada privasi serta kemudahan merawat aset Anda.
+          </p>
+        </div>
+
+        <!-- Slider Navigation Controls -->
+        <div class="gallery-controls">
+          <button class="gallery-nav-btn prev" id="ssPrevBtn" aria-label="Previous Slide">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/>
+            </svg>
+          </button>
+          <button class="gallery-nav-btn next" id="ssNextBtn" aria-label="Next Slide">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Quick Category Tabs for Screenshots -->
+      <div class="ss-tabs-bar" id="ssTabsBar">
+        <button class="ss-tab-pill active" data-index="0" data-i18n="ss.tab_1">Dashboard</button>
+        <button class="ss-tab-pill" data-index="1" data-i18n="ss.tab_2">Detail Aset</button>
+        <button class="ss-tab-pill" data-index="2" data-i18n="ss.tab_3">Pengingat & Log</button>
+        <button class="ss-tab-pill" data-index="3" data-i18n="ss.tab_4">Tambah Aset</button>
+        <button class="ss-tab-pill" data-index="4" data-i18n="ss.tab_5">Checklist</button>
+      </div>
+
+      <!-- Horizontal Scrollable Gallery Container -->
+      <div class="screenshots-track" id="ssTrack">
+        <!-- Slide 1: Dashboard Utama -->
+        <div class="ss-card" data-index="0">
+          <div class="phone-frame">
+            <div class="phone-bezel">
+              <img src="assets/screenshots/01_dashboard.png" alt="Dashboard Utama JAGAIN" class="phone-screen-img" loading="lazy">
+            </div>
+          </div>
+          <div class="ss-card-meta">
+            <span class="ss-step-tag" data-i18n="ss.card_1_tag">01 • Beranda Utama</span>
+            <h3 class="ss-card-title" data-i18n="ss.card_1_title">Dashboard Informasi Aset</h3>
+            <p class="ss-card-desc" data-i18n="ss.card_1_desc">
+              Pantau total aset, status kondisi, dan kategori aktif dalam satu ringkasan cerdas.
+            </p>
+          </div>
+        </div>
+
+        <!-- Slide 2: Detail Aset -->
+        <div class="ss-card" data-index="1">
+          <div class="phone-frame">
+            <div class="phone-bezel">
+              <img src="assets/screenshots/02_detail_aset.png" alt="Detail Aset JAGAIN" class="phone-screen-img" loading="lazy">
+            </div>
+          </div>
+          <div class="ss-card-meta">
+            <span class="ss-step-tag" data-i18n="ss.card_2_tag">02 • Detail Aset</span>
+            <h3 class="ss-card-title" data-i18n="ss.card_2_title">Informasi & Spesifikasi Lengkap</h3>
+            <p class="ss-card-desc" data-i18n="ss.card_2_desc">
+              Catat merk, model/tipe, tahun pembuatan, lokasi, dan progres perawatan aset.
+            </p>
+          </div>
+        </div>
+
+        <!-- Slide 3: Pengingat & Log -->
+        <div class="ss-card" data-index="2">
+          <div class="phone-frame">
+            <div class="phone-bezel">
+              <img src="assets/screenshots/03_pengingat_log.png" alt="Pengingat dan Riwayat Log JAGAIN" class="phone-screen-img" loading="lazy">
+            </div>
+          </div>
+          <div class="ss-card-meta">
+            <span class="ss-step-tag" data-i18n="ss.card_3_tag">03 • Jadwal & Catatan</span>
+            <h3 class="ss-card-title" data-i18n="ss.card_3_title">Pengingat & Riwayat Log</h3>
+            <p class="ss-card-desc" data-i18n="ss.card_3_desc">
+              Pengingat berkala untuk servis dan pajak, lengkap dengan log riwayat tindakan.
+            </p>
+          </div>
+        </div>
+
+        <!-- Slide 4: Tambah Aset Baru -->
+        <div class="ss-card" data-index="3">
+          <div class="phone-frame">
+            <div class="phone-bezel">
+              <img src="assets/screenshots/04_tambah_aset.png" alt="Tambah Aset Baru JAGAIN" class="phone-screen-img" loading="lazy">
+            </div>
+          </div>
+          <div class="ss-card-meta">
+            <span class="ss-step-tag" data-i18n="ss.card_4_tag">04 • Tambah Cepat</span>
+            <h3 class="ss-card-title" data-i18n="ss.card_4_title">Registrasi Aset Baru</h3>
+            <p class="ss-card-desc" data-i18n="ss.card_4_desc">
+              Pilih kategori (Kendaraan, Elektronik, Properti), foto/ikon, dan tentukan kondisi aset.
+            </p>
+          </div>
+        </div>
+
+        <!-- Slide 5: Checklist Perawatan -->
+        <div class="ss-card" data-index="4">
+          <div class="phone-frame">
+            <div class="phone-bezel">
+              <img src="assets/screenshots/05_checklist.png" alt="Checklist Perawatan JAGAIN" class="phone-screen-img" loading="lazy">
+            </div>
+          </div>
+          <div class="ss-card-meta">
+            <span class="ss-step-tag" data-i18n="ss.card_5_tag">05 • Checklist</span>
+            <h3 class="ss-card-title" data-i18n="ss.card_5_title">Tugas & Perawatan Rutin</h3>
+            <p class="ss-card-desc" data-i18n="ss.card_5_desc">
+              Daftar tugas berkala seperti servis rutin, oli mesin, hingga pajak tahunan.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
        3. Brand Values (Efisien & Ringkas)
        ======================================================================== -->
   <section class="values-section" id="nilai">

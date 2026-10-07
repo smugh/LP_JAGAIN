@@ -683,6 +683,223 @@ button {
 }
 
 /* ==========================================================================
+   App Screenshots Showcase Section
+   ========================================================================== */
+.screenshots-section {
+  padding: 84px 0 96px 0;
+  background: linear-gradient(180deg, #F8FAFC 0%, #FFFFFF 100%);
+  position: relative;
+  border-top: 1px solid var(--neutral-200);
+  border-bottom: 1px solid var(--neutral-200);
+  overflow: hidden;
+}
+
+.screenshots-header-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 24px;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.screenshots-header-wrap .section-header {
+  margin-bottom: 0;
+  text-align: left;
+}
+
+.screenshots-header-wrap .section-badge {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+.gallery-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.gallery-nav-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--neutral-white);
+  border: 1px solid var(--neutral-300);
+  color: var(--neutral-700);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-fast);
+}
+
+.gallery-nav-btn svg {
+  width: 20px;
+  height: 20px;
+}
+
+.gallery-nav-btn:hover {
+  background-color: var(--primary-teal);
+  border-color: var(--primary-teal);
+  color: var(--neutral-white);
+  box-shadow: 0 4px 14px rgba(20, 184, 166, 0.3);
+  transform: translateY(-2px);
+}
+
+.gallery-nav-btn:active {
+  transform: translateY(0);
+}
+
+/* Tabs Bar */
+.ss-tabs-bar {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding: 8px 2px 24px 2px;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.ss-tabs-bar::-webkit-scrollbar {
+  display: none;
+}
+
+.ss-tab-pill {
+  padding: 9px 20px;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  border: 1px solid var(--neutral-200);
+  background-color: var(--neutral-white);
+  color: var(--neutral-600);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+  box-shadow: var(--shadow-xs);
+}
+
+.ss-tab-pill:hover {
+  border-color: var(--primary-teal);
+  color: var(--primary-teal-dark);
+  background-color: var(--mint-bg);
+}
+
+.ss-tab-pill.active {
+  background-color: var(--primary-teal);
+  border-color: var(--primary-teal);
+  color: var(--neutral-white);
+  box-shadow: 0 4px 14px rgba(20, 184, 166, 0.28);
+}
+
+/* Track & Cards */
+.screenshots-track {
+  display: flex;
+  gap: 28px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 12px 6px 32px 6px;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+.screenshots-track::-webkit-scrollbar {
+  height: 8px;
+}
+
+.screenshots-track::-webkit-scrollbar-track {
+  background: var(--neutral-100);
+  border-radius: 10px;
+}
+
+.screenshots-track::-webkit-scrollbar-thumb {
+  background: rgba(20, 184, 166, 0.35);
+  border-radius: 10px;
+}
+
+.screenshots-track::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-teal);
+}
+
+.ss-card {
+  flex: 0 0 270px;
+  scroll-snap-align: center;
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transition-normal);
+}
+
+.ss-card:hover {
+  transform: translateY(-6px);
+}
+
+/* Phone Mockup Frame */
+.phone-frame {
+  position: relative;
+  border-radius: 40px;
+  padding: 7px;
+  background: #0f172a;
+  box-shadow: 0 20px 38px -12px rgba(15, 23, 42, 0.25), 0 0 0 1px rgba(255, 255, 255, 0.12);
+  margin-bottom: 18px;
+  transition: all var(--transition-normal);
+}
+
+.ss-card:hover .phone-frame {
+  box-shadow: 0 26px 45px -12px rgba(20, 184, 166, 0.32), 0 0 0 2px rgba(20, 184, 166, 0.5);
+}
+
+.phone-bezel {
+  overflow: hidden;
+  border-radius: 33px;
+  background: #ffffff;
+  line-height: 0;
+  position: relative;
+}
+
+.phone-screen-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+/* Card Meta */
+.ss-card-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.ss-step-tag {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--primary-teal-dark);
+  background-color: var(--mint-bg);
+  border-radius: 9999px;
+  padding: 3px 10px;
+  width: fit-content;
+  letter-spacing: 0.02em;
+}
+
+.ss-card-title {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--neutral-900);
+  margin: 2px 0 0 0;
+  line-height: 1.35;
+}
+
+.ss-card-desc {
+  font-size: 0.85rem;
+  color: var(--neutral-600);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* ==========================================================================
    Brand Values Section (Mengapa JAGAIN?)
    ========================================================================== */
 .values-section {
@@ -1567,6 +1784,24 @@ button {
   }
   .section-title {
     font-size: 1.85rem;
+  }
+  .screenshots-header-wrap {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  .gallery-controls {
+    display: none;
+  }
+  .ss-card {
+    flex: 0 0 240px;
+  }
+  .phone-frame {
+    border-radius: 34px;
+    padding: 6px;
+  }
+  .phone-bezel {
+    border-radius: 28px;
   }
   .values-grid {
     grid-template-columns: 1fr;

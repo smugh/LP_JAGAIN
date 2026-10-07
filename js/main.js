@@ -53,6 +53,31 @@ const translations = {
     'card.reminder_3_sub': 'Kesehatan baterai normal • Siklus 142',
     'card.reminder_3_badge': 'Kondisi Baik',
 
+    // App Screenshots Showcase (Section 2)
+    'ss.badge': 'Antarmuka Aplikasi',
+    'ss.title': 'Tampilan Langsung Aplikasi JAGAIN',
+    'ss.subtitle': 'Desain intuitif, bersih, dan fokus pada privasi serta kemudahan merawat aset Anda.',
+    'ss.tab_1': 'Dashboard',
+    'ss.tab_2': 'Detail Aset',
+    'ss.tab_3': 'Pengingat & Log',
+    'ss.tab_4': 'Tambah Aset',
+    'ss.tab_5': 'Checklist',
+    'ss.card_1_tag': '01 • Beranda Utama',
+    'ss.card_1_title': 'Dashboard Informasi Aset',
+    'ss.card_1_desc': 'Pantau total aset, status kondisi, dan kategori aktif dalam satu ringkasan cerdas.',
+    'ss.card_2_tag': '02 • Detail Aset',
+    'ss.card_2_title': 'Informasi & Spesifikasi Lengkap',
+    'ss.card_2_desc': 'Catat merk, model/tipe, tahun pembuatan, lokasi, dan progres perawatan aset.',
+    'ss.card_3_tag': '03 • Jadwal & Catatan',
+    'ss.card_3_title': 'Pengingat & Riwayat Log',
+    'ss.card_3_desc': 'Pengingat berkala untuk servis dan pajak, lengkap dengan log riwayat tindakan.',
+    'ss.card_4_tag': '04 • Tambah Cepat',
+    'ss.card_4_title': 'Registrasi Aset Baru',
+    'ss.card_4_desc': 'Pilih kategori (Kendaraan, Elektronik, Properti), foto/ikon, dan tentukan kondisi aset.',
+    'ss.card_5_tag': '05 • Checklist',
+    'ss.card_5_title': 'Tugas & Perawatan Rutin',
+    'ss.card_5_desc': 'Daftar tugas berkala seperti servis rutin, oli mesin, hingga pajak tahunan.',
+
     // Values Section
     'values.badge': 'Nilai & Prinsip Kami',
     'values.title': 'Kenapa JAGAIN?',
@@ -164,6 +189,31 @@ const translations = {
     'card.reminder_3_title': 'MacBook Pro 14"',
     'card.reminder_3_sub': 'Battery health optimal • Cycle 142',
     'card.reminder_3_badge': 'Good Condition',
+
+    // App Screenshots Showcase (Section 2)
+    'ss.badge': 'App Interface',
+    'ss.title': 'See JAGAIN in Action',
+    'ss.subtitle': 'A clean, intuitive interface designed for effortless daily asset care and privacy.',
+    'ss.tab_1': 'Dashboard',
+    'ss.tab_2': 'Asset Details',
+    'ss.tab_3': 'Alerts & Logs',
+    'ss.tab_4': 'Add Asset',
+    'ss.tab_5': 'Checklist',
+    'ss.card_1_tag': '01 • Home Dashboard',
+    'ss.card_1_title': 'Asset Overview Dashboard',
+    'ss.card_1_desc': 'Monitor asset health, total count, action-needed items, and categories at a glance.',
+    'ss.card_2_tag': '02 • Asset Details',
+    'ss.card_2_title': 'Complete Specifications',
+    'ss.card_2_desc': 'Log brand, model/type, year, storage location, and ongoing care progress.',
+    'ss.card_3_tag': '03 • Schedules & Logs',
+    'ss.card_3_title': 'Smart Alerts & Maintenance Log',
+    'ss.card_3_desc': 'Timely reminders for servicing and road tax with clear records of past actions.',
+    'ss.card_4_tag': '04 • Quick Entry',
+    'ss.card_4_title': 'Register New Assets',
+    'ss.card_4_desc': 'Select category (Vehicle, Gadget, Property), pick photo/icon, and set condition.',
+    'ss.card_5_tag': '05 • Checklist',
+    'ss.card_5_title': 'Routine Maintenance Checklist',
+    'ss.card_5_desc': 'Track routine tasks like fluid changes, brake inspections, and tax renewals.',
 
     // Values Section
     'values.badge': 'Our Values & Principles',
@@ -400,4 +450,74 @@ document.addEventListener('DOMContentLoaded', () => {
       header?.classList.remove('scrolled');
     }
   });
+
+  // 6. Screenshots Gallery Controls
+  initScreenshotsGallery();
 });
+
+// =============================================================================
+// 7. SCREENSHOTS GALLERY CONTROLLER
+// =============================================================================
+function initScreenshotsGallery() {
+  const track = document.getElementById('ssTrack');
+  const prevBtn = document.getElementById('ssPrevBtn');
+  const nextBtn = document.getElementById('ssNextBtn');
+  const tabs = document.querySelectorAll('.ss-tab-pill');
+  const cards = document.querySelectorAll('.ss-card');
+
+  if (!track || !cards.length) return;
+
+  // Navigation buttons
+  if (prevBtn) {
+    prevBtn.addEventListener('click', () => {
+      track.scrollBy({ left: -300, behavior: 'smooth' });
+    });
+  }
+
+  if (nextBtn) {
+    nextBtn.addEventListener('click', () => {
+      track.scrollBy({ left: 300, behavior: 'smooth' });
+    });
+  }
+
+  // Tab clicks
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      const idx = parseInt(tab.getAttribute('data-index'), 10);
+      if (cards[idx]) {
+        cards[idx].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+      }
+      tabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+    });
+  });
+
+  // Sync tabs on scroll
+  let scrollTimeout;
+  track.addEventListener('scroll', () => {
+    clearTimeout(scrollTimeout);
+    scrollTimeout = setTimeout(() => {
+      const trackCenter = track.scrollLeft + track.offsetWidth / 2;
+      let closestIdx = 0;
+      let minDistance = Infinity;
+
+      cards.forEach((card, idx) => {
+        const cardCenter = card.offsetLeft + card.offsetWidth / 2;
+        const dist = Math.abs(trackCenter - cardCenter);
+        if (dist < minDistance) {
+          minDistance = dist;
+          closestIdx = idx;
+        }
+      });
+
+      tabs.forEach(t => {
+        if (parseInt(t.getAttribute('data-index'), 10) === closestIdx) {
+          t.classList.add('active');
+        } else {
+          t.classList.remove('active');
+        }
+      });
+    }, 60);
+  });
+}
+

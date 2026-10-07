@@ -126,7 +126,7 @@ const translations = {
     'footer.desc': 'Aplikasi lokal-first untuk mencatat, mengingat, dan merawat aset-aset penting Anda dan keluarga.',
     'footer.tagline': 'Jaga yang Berarti.',
     'footer.col_contact': 'Hubungi Kami',
-    'footer.rights': '© 2026 JAGAIN. Hak cipta dilindungi undang-undang.',
+    'footer.rights': '© 2026 JAGAIN.',
     'footer.local_note': 'Dibangun dengan prinsip privasi Local-First.',
 
     // Toast
@@ -238,7 +238,7 @@ const translations = {
     'footer.desc': 'A local-first application to document, remember, and care for important assets in your life.',
     'footer.tagline': 'Care for what matters.',
     'footer.col_contact': 'Reach Us',
-    'footer.rights': '© 2026 JAGAIN. All rights reserved.',
+    'footer.rights': '© 2026 JAGAIN.',
     'footer.local_note': 'Built with privacy-first Local-First principles.',
 
     // Toast

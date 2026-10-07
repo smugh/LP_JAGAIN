@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JAGAIN — Catat, Ingat, Rawat · Jaga yang Berarti</title>
+  
+  <!-- Favicon (Vaficon yang sudah disiapkan) -->
+  <link rel="icon" type="image/png" href="assets/icons/vaficon_cerah.png">
+  <link rel="apple-touch-icon" href="assets/icons/vaficon_cerah.png">
+
+  <!-- Google Fonts Fallback & Optimization -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <meta name="description" content="JAGAIN adalah aplikasi lokal-first untuk mencatat aset berharga, mengingat tanggung jawab perawatannya, dan menyimpan riwayat tindakan. Catat · Ingat · Rawat.">
+  <meta name="keywords" content="JAGAIN, manajemen aset, perawatan kendaraan, local first, pengingat servis, catat aset keluarga">
+  <meta name="theme-color" content="#14B8A6">
+</head>
+<body>
+
+  <!-- ========================================================================
+       1. Navigation Bar (Sticky with Logo, Nav Links, Lang Switcher & CTA)
+       ======================================================================== -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="navbar">
+        <!-- Logo -->
+        <a href="#" class="nav-brand" aria-label="JAGAIN Homepage">
+          <img src="assets/icons/horizontal_logo.png" alt="JAGAIN - Jaga yang Berarti" class="nav-logo">
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <ul class="nav-links" id="nav-links-menu">
+          <li><a href="#tentang" class="nav-link" data-i18n="nav.about">Tentang</a></li>
+          <li><a href="#nilai" class="nav-link" data-i18n="nav.values">Nilai Brand</a></li>
+          <li><a href="#fitur" class="nav-link" data-i18n="nav.features">Fitur</a></li>
+          <li><a href="#kategori" class="nav-link" data-i18n="nav.categories">Kategori Aset</a></li>
+          <li><a href="#filosofi" class="nav-link" data-i18n="nav.philosophy">Filosofi</a></li>
+          <li><a href="#surat-tim" class="nav-link" data-i18n="nav.letter">Surat Tim</a></li>
+          <li><a href="#kontak" class="nav-link" data-i18n="nav.contact">Kontak</a></li>
+        </ul>
+
+        <!-- Action Buttons (Language Switcher & Download CTA) -->
+        <div class="nav-actions">
+          <!-- Button Alih Bahasa (AC 5) -->
+          <button class="lang-switch-btn" id="lang-toggle-btn" aria-label="Ganti Bahasa / Switch Language" title="Ganti Bahasa (ID / EN)">
+            <span class="lang-opt active" data-lang="id">ID</span>
+            <span class="lang-opt" data-lang="en">EN</span>
+          </button>
+
+          <!-- Button Download Google Drive (AC 6) -->
+          <a href="https://drive.google.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-download-gdrive">
+            <svg class="drive-icon" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM17 13l-5 5-5-5h3V9h4v4h3z"/>
+            </svg>
+            <span data-i18n="nav.download">Unduh APK</span>
+          </a>
+
+          <!-- Mobile Menu Hamburger -->
+          <button class="mobile-toggle" id="mobile-menu-toggle" aria-label="Toggle Menu">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       2. Hero Section
+       ======================================================================== -->
+  <section class="hero-section" id="tentang">
+    <div class="container">
+      <div class="hero-grid">
+        <!-- Hero Text -->
+        <div class="hero-content">
+          <div class="section-badge">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/>
+            </svg>
+            <span data-i18n="hero.badge">Aplikasi Manajemen Aset Pribadi & Keluarga · Local-First</span>
+          </div>
+
+          <h1 class="hero-title">
+            <span data-i18n="hero.title_pre">Jangan Cuma Punya,</span><br>
+            <span class="highlight" data-i18n="hero.title_post">JAGAIN.</span>
+          </h1>
+
+          <div class="hero-tagline" data-i18n="hero.tagline">Catat · Ingat · Rawat</div>
+
+          <p class="hero-desc" data-i18n="hero.desc">
+            Aplikasi lokal-first untuk mencatat aset penting, mengingat tanggung jawab perawatannya, dan menyimpan riwayat tindakan. Tanpa iklan, tanpa pelacakan — data aman seutuhnya di perangkat Anda.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="https://drive.google.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-drive btn-download-gdrive">
+              <svg class="drive-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM17 13l-5 5-5-5h3V9h4v4h3z"/>
+              </svg>
+              <span data-i18n="hero.btn_download">Unduh via Google Drive</span>
+            </a>
+
+            <a href="#fitur" class="btn btn-secondary">
+              <span data-i18n="hero.btn_learn">Pelajari Fitur</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+              </svg>
+            </a>
+          </div>
+
+          <div class="hero-meta-notice">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="16" x2="12" y2="12"></line>
+              <line x1="12" y1="8" x2="12.01" y2="8"></line>
+            </svg>
+            <span data-i18n="hero.meta_note">Format .APK Android • Unduh langsung dari Google Drive</span>
+          </div>
+
+          <!-- Feature Trust Chips -->
+          <div class="hero-features-chips">
+            <div class="chip-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                <path d="M7 11V7a5 5 0 0110 0v4"></path>
+              </svg>
+              <span data-i18n="hero.chip_local">100% Local-First</span>
+            </div>
+            <div class="chip-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <span data-i18n="hero.chip_noads">Bebas Iklan & Pelacak</span>
+            </div>
+            <div class="chip-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+              </svg>
+              <span data-i18n="hero.chip_reminder">Pengingat Cerdas</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Visual (Interactive Brand Showcase Card - No app screenshots needed) -->
+        <div class="hero-visual">
+          <div class="hero-glow-1"></div>
+          <div class="hero-glow-2"></div>
+
+          <div class="hero-visual-card">
+            <!-- Header Card -->
+            <div class="card-header-bar">
+              <div class="user-badge">
+                <div class="avatar-circle">J</div>
+                <div>
+                  <div class="user-text-title" data-i18n="card.user_title">Aset Keluarga Anda</div>
+                  <div class="user-text-sub" data-i18n="card.user_sub">Tersimpan aman di perangkat</div>
+                </div>
+              </div>
+              <div class="status-indicator">
+                <span class="status-dot"></span>
+                <span data-i18n="card.status_safe">Semua Terjadwal</span>
+              </div>
+            </div>
+
+            <!-- Category Pills Using Brand Images -->
+            <div class="asset-quick-categories">
+              <div class="quick-cat-item">
+                <img src="assets/images/car.png" alt="Mobil" class="quick-cat-icon">
+                <span class="quick-cat-label" data-i18n="card.cat_car">Kendaraan</span>
+                <span class="quick-cat-count">2 unit</span>
+              </div>
+              <div class="quick-cat-item">
+                <img src="assets/images/laptop.png" alt="Laptop" class="quick-cat-icon">
+                <span class="quick-cat-label" data-i18n="card.cat_gadget">Gadget</span>
+                <span class="quick-cat-count">4 unit</span>
+              </div>
+              <div class="quick-cat-item">
+                <img src="assets/images/house.png" alt="Rumah" class="quick-cat-icon">
+                <span class="quick-cat-label" data-i18n="card.cat_house">Properti</span>
+                <span class="quick-cat-count">1 unit</span>
+              </div>
+              <div class="quick-cat-item">
+                <img src="assets/images/watch.png" alt="Jam Tangan" class="quick-cat-icon">
+                <span class="quick-cat-label" data-i18n="card.cat_watch">Koleksi</span>
+                <span class="quick-cat-count">3 item</span>
+              </div>
+            </div>
+
+            <!-- Asset Reminders Live Preview -->
+            <div class="live-reminder-list">
+              <div class="reminder-item-card">
+                <div class="reminder-icon-box">
+                  <img src="assets/images/car.png" alt="Car">
+                </div>
+                <div class="reminder-item-info">
+                  <div class="reminder-title" data-i18n="card.reminder_1_title">Toyota Avanza 2021</div>
+                  <div class="reminder-meta" data-i18n="card.reminder_1_sub">Servis rutin 50.000 km • Ganti oli mesin</div>
+                </div>
+                <span class="reminder-badge badge-urgent" data-i18n="card.reminder_1_badge">5 Hari Lagi</span>
+              </div>
+
+              <div class="reminder-item-card">
+                <div class="reminder-icon-box">
+                  <img src="assets/images/motor.png" alt="Motor">
+                </div>
+                <div class="reminder-item-info">
+                  <div class="reminder-title" data-i18n="card.reminder_2_title">Honda Vario 160</div>
+                  <div class="reminder-meta" data-i18n="card.reminder_2_sub">Pajak STNK Tahunan • Perpanjangan</div>
+                </div>
+                <span class="reminder-badge badge-normal" data-i18n="card.reminder_2_badge">Perlu Perhatian</span>
+              </div>
+
+              <div class="reminder-item-card">
+                <div class="reminder-icon-box">
+                  <img src="assets/images/laptop.png" alt="Laptop">
+                </div>
+                <div class="reminder-item-info">
+                  <div class="reminder-title" data-i18n="card.reminder_3_title">MacBook Pro 14"</div>
+                  <div class="reminder-meta" data-i18n="card.reminder_3_sub">Kesehatan baterai normal • Siklus 142</div>
+                </div>
+                <span class="reminder-badge badge-info" data-i18n="card.reminder_3_badge">Kondisi Baik</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       3. Brand Values & Philosophy ("Mengapa JAGAIN?")
+       ======================================================================== -->
+  <section class="values-section" id="nilai">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+          </svg>
+          <span data-i18n="values.badge">Nilai & Prinsip Kami</span>
+        </div>
+        <h2 class="section-title" data-i18n="values.title">Kenapa JAGAIN Diciptakan?</h2>
+        <p class="section-subtitle" data-i18n="values.subtitle">
+          Bagi kami, aset bukan sekadar tumpukan barang yang kita miliki, melainkan bagian dari perjalanan hidup, hasil kerja keras, dan penopang keseharian.
+        </p>
+      </div>
+
+      <div class="values-grid">
+        <!-- Value 1: Private & Secure -->
+        <div class="value-card">
+          <div class="value-icon-box val-teal">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+            </svg>
+          </div>
+          <h3 class="value-title" data-i18n="val.1.title">Private & Secure</h3>
+          <p class="value-desc" data-i18n="val.1.desc">
+            Data kamu, di perangkat kamu. Privasi adalah prioritas mutlak. JAGAIN bekerja local-first tanpa menyimpan data ke server pihak ketiga.
+          </p>
+        </div>
+
+        <!-- Value 2: Meaningful Ownership -->
+        <div class="value-card">
+          <div class="value-icon-box val-blue">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+            </svg>
+          </div>
+          <h3 class="value-title" data-i18n="val.2.title">Meaningful Ownership</h3>
+          <p class="value-desc" data-i18n="val.2.desc">
+            Aset bukan sekadar benda, tapi cerita hidup. Kami membantu Anda merawat barang berharga agar manfaatnya bertahan lama.
+          </p>
+        </div>
+
+        <!-- Value 3: Care & Responsibility -->
+        <div class="value-card">
+          <div class="value-icon-box val-teal">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/>
+            </svg>
+          </div>
+          <h3 class="value-title" data-i18n="val.3.title">Care & Responsibility</h3>
+          <p class="value-desc" data-i18n="val.3.desc">
+            Membantu kamu mengingat tanggung jawab perawatan, jadwal servis berkala, dan perpanjangan dokumen tepat waktu.
+          </p>
+        </div>
+
+        <!-- Value 4: For Individuals & Families -->
+        <div class="value-card">
+          <div class="value-icon-box val-navy">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+            </svg>
+          </div>
+          <h3 class="value-title" data-i18n="val.4.title">For Individuals & Families</h3>
+          <p class="value-desc" data-i18n="val.4.desc">
+            Dirancang hangat dan sederhana untuk kamu dan orang-orang yang kamu sayangi, tanpa kerumitan teknis.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       4. Core Features Section
+       ======================================================================== -->
+  <section class="features-section" id="fitur">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
+          </svg>
+          <span data-i18n="features.badge">Fitur Unggulan</span>
+        </div>
+        <h2 class="section-title" data-i18n="features.title">Semua yang Dibutuhkan untuk Menjaga Aset</h2>
+        <p class="section-subtitle" data-i18n="features.subtitle">
+          Dirancang praktis, ringan, dan fokus pada hal terpenting dalam pemeliharaan barang berharga.
+        </p>
+      </div>
+
+      <div class="features-grid">
+        <!-- Feature 1 -->
+        <div class="feature-box">
+          <div class="feature-icon-wrapper">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/>
+            </svg>
+          </div>
+          <div class="feature-content">
+            <h3 data-i18n="feat.1.title">Pencatatan Aset Rinci</h3>
+            <p data-i18n="feat.1.desc">Dokumentasikan setiap aset mulai dari merk, tipe, tahun, nomor rangka/seri, lokasi penyimpanan, hingga catatan khusus.</p>
+            <ul class="feature-points">
+              <li>
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                <span data-i18n="feat.1.p1">Kategori kendaraan, gadget, properti, & lainnya</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                <span data-i18n="feat.1.p2">Status kondisi: Baik, Perlu Perhatian, Kritis</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="feature-box">
+          <div class="feature-icon-wrapper">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <div class="feature-content">
+            <h3 data-i18n="feat.2.title">Pengingat Perawatan Pintar</h3>
+            <p data-i18n="feat.2.desc">Hindari kerusakan fatal akibat lupa servis. Jadwalkan pengingat ganti oli, servis AC, garansi, maupun perpanjangan pajak.</p>
+            <ul class="feature-points">
+              <li>
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                <span data-i18n="feat.2.p1">Notifikasi lokal tanpa butuh koneksi internet</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                <span data-i18n="feat.2.p2">Kustomisasi interval berkala atau tanggal khusus</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="feature-box">
+          <div class="feature-icon-wrapper">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+            </svg>
+          </div>
+          <div class="feature-content">
+            <h3 data-i18n="feat.3.title">Riwayat Aktivitas & Servis</h3>
+            <p data-i18n="feat.3.desc">Setiap tindakan perawatan yang telah selesai dicatat rapi. Ketahui kapan terakhir diservis dan bengkel mana yang menangani.</p>
+            <ul class="feature-points">
+              <li>
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                <span data-i18n="feat.3.p1">Histori tindakan yang kronologis dan transparan</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                <span data-i18n="feat.3.p2">Membantu menjaga nilai jual kembali aset</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Feature 4 -->
+        <div class="feature-box">
+          <div class="feature-icon-wrapper">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+          </div>
+          <div class="feature-content">
+            <h3 data-i18n="feat.4.title">Local-First & Super Cepat</h3>
+            <p data-i18n="feat.4.desc">Aplikasi langsung terbuka dalam hitungan detik. Tersimpan di database lokal (SQLite/Drift) dengan keamanan terjamin.</p>
+            <ul class="feature-points">
+              <li>
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                <span data-i18n="feat.4.p1">Dapat digunakan sepenuhnya saat offline</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                <span data-i18n="feat.4.p2">Cadangan dan ekspor data kapan saja</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       5. Asset Categories Showcase (Menggunakan Aset Visual Asli)
+       ======================================================================== -->
+  <section class="categories-section" id="kategori">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H8V4h12v12z"/>
+          </svg>
+          <span data-i18n="categories.badge">Kategori Fleksibel</span>
+        </div>
+        <h2 class="section-title" data-i18n="categories.title">Apa Saja yang Bisa Dijaga?</h2>
+        <p class="section-subtitle" data-i18n="categories.subtitle">
+          JAGAIN siap mengelola berbagai ragam aset berharga dalam kehidupan pribadi maupun rumah tangga Anda.
+        </p>
+      </div>
+
+      <div class="categories-grid">
+        <!-- Cat 1: Car -->
+        <div class="category-card">
+          <img src="assets/images/car.png" alt="Mobil" class="category-badge-img">
+          <h3 class="category-title" data-i18n="cat.1.title">Mobil & Kendaraan Roda Empat</h3>
+          <p class="category-desc" data-i18n="cat.1.desc">Pantau odometer, tanggal ganti oli, tune up mesin, rotasi ban, dan perpanjangan STNK serta uji emisi berkala.</p>
+          <div class="category-examples">
+            <div class="category-examples-title" data-i18n="cat.1.ex_label">Contoh hal yang dicatat:</div>
+            <div class="category-examples-tags">
+              <span class="tag-item" data-i18n="cat.1.tag1">Ganti Oli</span>
+              <span class="tag-item" data-i18n="cat.1.tag2">Pajak STNK</span>
+              <span class="tag-item" data-i18n="cat.1.tag3">Klaim Asuransi</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cat 2: Motorcycle -->
+        <div class="category-card">
+          <img src="assets/images/motor.png" alt="Sepeda Motor" class="category-badge-img">
+          <h3 class="category-title" data-i18n="cat.2.title">Sepeda Motor</h3>
+          <p class="category-desc" data-i18n="cat.2.desc">Perawatan rantai/CVT, ganti kampas rem, servis rutin bengkel resmi, dan masa berlaku dokumen kendaraan.</p>
+          <div class="category-examples">
+            <div class="category-examples-title" data-i18n="cat.2.ex_label">Contoh hal yang dicatat:</div>
+            <div class="category-examples-tags">
+              <span class="tag-item" data-i18n="cat.2.tag1">Servis CVT</span>
+              <span class="tag-item" data-i18n="cat.2.tag2">Aki & Oli</span>
+              <span class="tag-item" data-i18n="cat.2.tag3">Pajak Tahunan</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cat 3: Laptop -->
+        <div class="category-card">
+          <img src="assets/images/laptop.png" alt="Laptop & PC" class="category-badge-img">
+          <h3 class="category-title" data-i18n="cat.3.title">Laptop & Komputer Kerja</h3>
+          <p class="category-desc" data-i18n="cat.3.desc">Kelola masa berlaku garansi, jadwal pembersihan thermal paste, backup data, dan riwayat upgrade hardware.</p>
+          <div class="category-examples">
+            <div class="category-examples-title" data-i18n="cat.3.ex_label">Contoh hal yang dicatat:</div>
+            <div class="category-examples-tags">
+              <span class="tag-item" data-i18n="cat.3.tag1">Garansi Resmi</span>
+              <span class="tag-item" data-i18n="cat.3.tag2">Siklus Baterai</span>
+              <span class="tag-item" data-i18n="cat.3.tag3">Backup Rutin</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cat 4: Gadget -->
+        <div class="category-card">
+          <img src="assets/images/gadget.png" alt="Smartphone & Gadget" class="category-badge-img">
+          <h3 class="category-title" data-i18n="cat.4.title">Smartphone & Gadget</h3>
+          <p class="category-desc" data-i18n="cat.4.desc">Catat IMEI, tanggal pembelian, garansi proteksi layar, dan aksesoris penunjang produktivitas sehari-hari.</p>
+          <div class="category-examples">
+            <div class="category-examples-title" data-i18n="cat.4.ex_label">Contoh hal yang dicatat:</div>
+            <div class="category-examples-tags">
+              <span class="tag-item" data-i18n="cat.4.tag1">Masa Garansi</span>
+              <span class="tag-item" data-i18n="cat.4.tag2">Nomor IMEI</span>
+              <span class="tag-item" data-i18n="cat.4.tag3">Faktur Pembelian</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cat 5: House -->
+        <div class="category-card">
+          <img src="assets/images/house.png" alt="Rumah & Properti" class="category-badge-img">
+          <h3 class="category-title" data-i18n="cat.5.title">Rumah & Properti</h3>
+          <p class="category-desc" data-i18n="cat.5.desc">Jadwal servis AC berkala, pengurasan tandon air, inspeksi atap/bocor, dan tanggal pembayaran PBB tahunan.</p>
+          <div class="category-examples">
+            <div class="category-examples-title" data-i18n="cat.5.ex_label">Contoh hal yang dicatat:</div>
+            <div class="category-examples-tags">
+              <span class="tag-item" data-i18n="cat.5.tag1">Cuci AC Rutin</span>
+              <span class="tag-item" data-i18n="cat.5.tag2">Pajak PBB</span>
+              <span class="tag-item" data-i18n="cat.5.tag3">Cek Pompa Air</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cat 6: Watches & Valuables -->
+        <div class="category-card">
+          <img src="assets/images/watch.png" alt="Koleksi & Jam Tangan" class="category-badge-img">
+          <h3 class="category-title" data-i18n="cat.6.title">Koleksi & Barang Berharga</h3>
+          <p class="category-desc" data-i18n="cat.6.desc">Jam tangan mekanik, kamera, perhiasan, atau dokumen penting keluarga seperti sertifikat dan polis.</p>
+          <div class="category-examples">
+            <div class="category-examples-title" data-i18n="cat.6.ex_label">Contoh hal yang dicatat:</div>
+            <div class="category-examples-tags">
+              <span class="tag-item" data-i18n="cat.6.tag1">Servis Mesin Jam</span>
+              <span class="tag-item" data-i18n="cat.6.tag2">Sertifikat Asli</span>
+              <span class="tag-item" data-i18n="cat.6.tag3">Dry Box / Lensa</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       6. Logo & Brand Philosophy Section
+       ======================================================================== -->
+  <section class="philosophy-section" id="filosofi">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
+          </svg>
+          <span data-i18n="phil.badge">Identitas & Filosofi</span>
+        </div>
+        <h2 class="section-title" data-i18n="phil.title">Makna di Balik Simbol JAGAIN</h2>
+        <p class="section-subtitle" data-i18n="phil.subtitle">
+          Setiap elemen visual dirancang mencerminkan komitmen terhadap keamanan, kemudahan, dan nilai kemanusiaan.
+        </p>
+      </div>
+
+      <div class="philosophy-layout">
+        <div class="philosophy-display">
+          <img src="assets/icons/primary_logo.png" alt="Logo JAGAIN Filosofi" class="philosophy-logo">
+          <span class="philosophy-badge" data-i18n="phil.card_badge">Desain Bermakna</span>
+        </div>
+
+        <div class="philosophy-items">
+          <!-- Phil 1 -->
+          <div class="phil-item">
+            <div class="phil-num">1</div>
+            <div class="phil-text">
+              <h4 data-i18n="phil.1.title">Bentuk Perisai (Shield)</h4>
+              <p data-i18n="phil.1.desc">Melambangkan perlindungan terpercaya, ketenangan batin, dan benteng pertahanan bagi barang-barang bernilai yang Anda miliki.</p>
+            </div>
+          </div>
+
+          <!-- Phil 2 -->
+          <div class="phil-item">
+            <div class="phil-num">2</div>
+            <div class="phil-text">
+              <h4 data-i18n="phil.2.title">Inisial Huruf "J"</h4>
+              <p data-i18n="phil.2.desc">Representasi dari identitas JAGAIN yang ramah, modern, bersahabat, dan mudah diingat oleh keluarga Indonesia.</p>
+            </div>
+          </div>
+
+          <!-- Phil 3 -->
+          <div class="phil-item">
+            <div class="phil-num">3</div>
+            <div class="phil-text">
+              <h4 data-i18n="phil.3.title">Figur Manusia (The Person)</h4>
+              <p data-i18n="phil.3.desc">Melambangkan bahwa manusia dan orang terdekat adalah inti utama. Barang dirawat demi mendukung kebahagiaan mereka.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       7. Surat Hangat dari Tim JAGAIN (Personal Narrative & Support)
+       ======================================================================== -->
+  <section class="letter-section" id="surat-tim">
+    <div class="container">
+      <div class="letter-card">
+        <div class="letter-quote-mark">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-8.983z"/>
+          </svg>
+        </div>
+
+        <div class="letter-header">
+          <div class="section-badge">
+            <span data-i18n="letter.badge">Pesan dari Pembuat</span>
+          </div>
+          <h3 class="letter-greeting" data-i18n="letter.greeting">Halo, Terima Kasih Sudah Memilih JAGAIN</h3>
+          <div class="letter-subtitle" data-i18n="letter.subtitle">Sebuah catatan terbuka dari tim pengembang</div>
+        </div>
+
+        <div class="letter-body">
+          <p data-i18n="letter.p1">
+            JAGAIN lahir dari sebuah hal sederhana: kami ingin membantu membuat keseharian menjadi sedikit lebih mudah — membantu kita mencatat, mengingat, dan merawat apa yang kita miliki dengan lebih baik.
+          </p>
+
+          <p data-i18n="letter.p2">
+            Kami menyadari bahwa versi yang Anda gunakan saat ini masih jauh dari sempurna. Masih ada banyak hal yang bisa diperbaiki, dikembangkan, dan mungkin juga belum sesuai dengan apa yang Anda butuhkan. Dan kami tidak ingin berpura-pura bahwa semuanya sudah selesai.
+          </p>
+
+          <div class="letter-highlight" data-i18n="letter.highlight">
+            Justru karena itu, kami sangat terbuka terhadap kritik, saran, ide, maupun feedback dari Anda. Setiap masukan membantu kami memahami bagaimana JAGAIN benar-benar digunakan dalam kehidupan sehari-hari.
+          </div>
+
+          <p data-i18n="letter.p3">
+            Jika Anda memiliki kebutuhan khusus dan merasa JAGAIN akan lebih berguna dengan penyesuaian tertentu, kami juga terbuka untuk berkolaborasi dan membuat versi yang lebih sesuai dengan kebutuhan Anda.
+          </p>
+        </div>
+
+        <!-- Dukungan Sukarela (GoPay) -->
+        <div class="letter-support-box">
+          <div class="support-left">
+            <img src="assets/icons/gopay_logo.png" alt="GoPay Support" class="gopay-img">
+            <div class="support-info">
+              <h5 data-i18n="letter.support_title">Dukungan Sukarela Tim JAGAIN (GoPay)</h5>
+              <p><strong>+62 851-7976-5891</strong> (a.n. Smugh)</p>
+              <p data-i18n="letter.support_desc">Tidak ada kewajiban apa pun. Menggunakan JAGAIN atau membagikannya sudah sangat berarti bagi kami.</p>
+            </div>
+          </div>
+          <button class="btn-copy" id="btn-copy-gopay" title="Salin nomor GoPay">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+              <path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"></path>
+            </svg>
+            <span data-i18n="letter.copy_gopay">Salin Nomor GoPay</span>
+          </button>
+        </div>
+
+        <div class="letter-sign">
+          <div class="sign-tagline" data-i18n="letter.sign_tagline">Catat. Ingat. Rawat.</div>
+          <div class="sign-author" data-i18n="letter.sign_author">Dengan hangat, Tim JAGAIN</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       8. Download CTA Banner (Mengarah ke Google Drive - AC 6)
+       ======================================================================== -->
+  <section class="cta-download-section">
+    <div class="container">
+      <div class="cta-banner">
+        <div class="cta-content">
+          <h2 data-i18n="cta.title">Siap Merawat Apa yang Berarti Bagi Anda?</h2>
+          <p data-i18n="cta.desc">
+            Unduh file aplikasi Android JAGAIN sekarang via Google Drive dan mulai tata jadwal perawatan aset Anda dengan lebih tenang.
+          </p>
+
+          <div class="cta-btn-wrapper">
+            <a href="https://drive.google.com" target="_blank" rel="noopener noreferrer" class="btn-gdrive-primary btn-download-gdrive">
+              <svg class="drive-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM17 13l-5 5-5-5h3V9h4v4h3z"/>
+              </svg>
+              <span data-i18n="cta.btn">Unduh JAGAIN (Google Drive)</span>
+            </a>
+            <span class="cta-file-note" data-i18n="cta.note">Aplikasi bebas iklan • 100% Local-first • Ringan & Aman</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       9. Contact Section (2 Kontak: Email & No HP - AC 7)
+       ======================================================================== -->
+  <section class="contact-section" id="kontak">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+          </svg>
+          <span data-i18n="contact.badge">Terhubung Langsung</span>
+        </div>
+        <h2 class="section-title" data-i18n="contact.title">Punya Pertanyaan, Ide, atau Ingin Berkolaborasi?</h2>
+        <p class="section-subtitle" data-i18n="contact.subtitle">
+          Tim JAGAIN selalu siap mendengar dan berdiskusi. Hubungi kami melalui salah satu saluran berikut:
+        </p>
+      </div>
+
+      <div class="contact-cards-grid">
+        <!-- Contact Card 1: Email -->
+        <div class="contact-card">
+          <div class="contact-icon-box c-icon-teal">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+            </svg>
+          </div>
+          <div class="contact-label" data-i18n="contact.email_label">Surel / Email Resmi</div>
+          <div class="contact-value">smughbowf@gmail.com</div>
+          <p class="contact-desc" data-i18n="contact.email_desc">
+            Kirimkan kritik, saran, proposal kolaborasi, atau laporan bug secara terperinci.
+          </p>
+          <div class="contact-action-group">
+            <a href="mailto:smughbowf@gmail.com" class="btn-contact-action btn-action-primary">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/>
+              </svg>
+              <span data-i18n="contact.email_btn_send">Kirim Email</span>
+            </a>
+            <button class="btn-contact-action btn-action-secondary" id="btn-copy-email">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                <path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"></path>
+              </svg>
+              <span data-i18n="contact.email_btn_copy">Salin Alamat</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Contact Card 2: Phone / WhatsApp -->
+        <div class="contact-card">
+          <div class="contact-icon-box c-icon-blue">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+            </svg>
+          </div>
+          <div class="contact-label" data-i18n="contact.phone_label">WhatsApp & No. Handphone</div>
+          <div class="contact-value">+62851 797 65891</div>
+          <p class="contact-desc" data-i18n="contact.phone_desc">
+            Obrolan langsung dan konsultasi cepat melalui chat WhatsApp maupun panggilan.
+          </p>
+          <div class="contact-action-group">
+            <a href="https://wa.me/6285179765891" target="_blank" rel="noopener noreferrer" class="btn-contact-action btn-action-primary">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2z"/>
+              </svg>
+              <span data-i18n="contact.phone_btn_wa">Chat WhatsApp</span>
+            </a>
+            <button class="btn-contact-action btn-action-secondary" id="btn-copy-phone">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                <path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"></path>
+              </svg>
+              <span data-i18n="contact.phone_btn_copy">Salin Nomor</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       10. Footer Section
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand-col">
+          <img src="assets/icons/horizontal_logo.png" alt="JAGAIN Logo" class="footer-logo">
+          <p class="footer-brand-desc" data-i18n="footer.desc">
+            Aplikasi lokal-first untuk mencatat, mengingat, dan merawat aset-aset penting dalam kehidupan pribadi dan keluarga Anda.
+          </p>
+          <div class="footer-badge-tag" data-i18n="footer.tagline">Jaga yang Berarti.</div>
+        </div>
+
+        <div class="footer-col">
+          <h4 data-i18n="footer.col_nav">Navigasi</h4>
+          <ul class="footer-links">
+            <li><a href="#tentang" data-i18n="nav.about">Tentang</a></li>
+            <li><a href="#nilai" data-i18n="nav.values">Nilai Brand</a></li>
+            <li><a href="#fitur" data-i18n="nav.features">Fitur</a></li>
+            <li><a href="#kategori" data-i18n="nav.categories">Kategori Aset</a></li>
+            <li><a href="#filosofi" data-i18n="nav.philosophy">Filosofi</a></li>
+            <li><a href="#surat-tim" data-i18n="nav.letter">Surat Tim</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 data-i18n="footer.col_contact">Hubungi Kami</h4>
+          <ul class="footer-links">
+            <li><a href="mailto:smughbowf@gmail.com">smughbowf@gmail.com</a></li>
+            <li><a href="https://wa.me/6285179765891" target="_blank" rel="noopener noreferrer">+62851 797 65891</a></li>
+            <li><a href="https://drive.google.com" target="_blank" rel="noopener noreferrer" class="btn-download-gdrive" data-i18n="nav.download">Unduh File APK</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div data-i18n="footer.rights">© 2026 JAGAIN. Hak cipta dilindungi undang-undang.</div>
+        <div data-i18n="footer.local_note">Dibangun dengan prinsip privasi Local-First.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Main JavaScript -->
+  <script src="js/main.js"></script>
+</body>
+</html>

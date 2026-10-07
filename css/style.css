@@ -848,85 +848,66 @@ button {
    Asset Categories Section
    ========================================================================== */
 .categories-section {
-  padding: 96px 0;
+  padding: 64px 0;
   background-color: var(--neutral-white);
 }
 
 .categories-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+  gap: 16px;
 }
 
 .category-card {
   border: 1px solid var(--neutral-200);
-  border-radius: var(--radius-lg);
-  padding: 30px 24px;
+  border-radius: var(--radius-md);
+  padding: 16px 18px;
   background-color: var(--neutral-50);
-  transition: all var(--transition-normal);
+  transition: all var(--transition-fast);
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
+  gap: 14px;
 }
 
 .category-card:hover {
   background-color: var(--neutral-white);
   border-color: var(--primary-teal);
-  box-shadow: var(--shadow-md);
-  transform: translateY(-3px);
+  box-shadow: var(--shadow-sm);
+  transform: translateY(-2px);
 }
 
 .category-badge-img {
-  width: 68px;
-  height: 68px;
-  margin-bottom: 20px;
+  width: 44px;
+  height: 44px;
+  margin-bottom: 0;
   border-radius: 50%;
   box-shadow: var(--shadow-sm);
   background-color: var(--neutral-white);
+  flex-shrink: 0;
+}
+
+.category-card-content {
+  flex: 1;
+  min-width: 0;
 }
 
 .category-title {
   font-family: var(--font-heading);
-  font-size: 1.25rem;
+  font-size: 1rem;
   font-weight: 700;
   color: var(--neutral-900);
-  margin-bottom: 8px;
-}
-
-.category-desc {
-  font-size: 0.9rem;
-  color: var(--neutral-600);
-  margin-bottom: 18px;
-  line-height: 1.5;
-}
-
-.category-examples {
-  background-color: var(--neutral-white);
-  border: 1px solid var(--neutral-200);
-  border-radius: var(--radius-sm);
-  padding: 12px 14px;
-  width: 100%;
-}
-
-.category-examples-title {
-  font-size: 0.75rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: var(--primary-teal-dark);
-  margin-bottom: 6px;
+  margin-bottom: 4px;
 }
 
 .category-examples-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
-  margin-top: 12px;
+  gap: 6px;
 }
 
 .tag-item {
-  font-size: 0.8rem;
-  padding: 4px 12px;
+  font-size: 0.725rem;
+  padding: 2px 8px;
   background-color: var(--neutral-white);
   color: var(--neutral-700);
   border: 1px solid var(--neutral-200);
@@ -939,6 +920,51 @@ button {
   border-color: var(--primary-teal);
   color: var(--primary-teal-deep);
   background-color: var(--mint-bg);
+}
+
+/* White Label Information Card */
+.whitelabel-card {
+  max-width: 900px;
+  margin: 0 auto 36px auto;
+  background: linear-gradient(135deg, var(--mint-bg) 0%, #F0FDF4 100%);
+  border: 1px solid var(--mint-border);
+  border-radius: var(--radius-lg);
+  padding: 24px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.whitelabel-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  background-color: var(--neutral-white);
+  color: var(--primary-teal-deep);
+  border: 1px solid var(--mint-border);
+  border-radius: var(--radius-full);
+  font-size: 0.8rem;
+  font-weight: 700;
+  width: fit-content;
+}
+
+.whitelabel-badge svg {
+  color: var(--primary-teal);
+}
+
+.whitelabel-content h3 {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--neutral-900);
+  margin-bottom: 6px;
+}
+
+.whitelabel-content p {
+  font-size: 0.925rem;
+  color: var(--neutral-700);
+  line-height: 1.55;
 }
 
 /* ==========================================================================
